@@ -33,7 +33,7 @@ export const Navigation: React.FC = () => {
             </nav>
           </div>
           <div className="flex items-center space-x-4">
-            {/* Theme toggle button */}
+            
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full focus:outline-none bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600"
@@ -46,7 +46,7 @@ export const Navigation: React.FC = () => {
               )}
             </button>
 
-            {/* Cart Link */}
+            
             <Link to="/cart" className="flex items-center">
               <div className="relative">
                 <ShoppingCart className="h-6 w-6 text-gray-600 dark:text-gray-300" />
