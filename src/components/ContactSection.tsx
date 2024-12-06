@@ -75,7 +75,7 @@ export const ContactSection: React.FC = () => {
               <Mail className="w-6 h-6 text-blue-600 flex-shrink-0" />
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Email</h3>
-                <p className="text-gray-600 dark:text-gray-200">miaadel1988@yahoo.com</p>
+                <p className="text-gray-600 dark:text-gray-200">minaadel1988@yahoo.com</p>
               </div>
             </div>
             <div className="flex items-start space-x-4">
