@@ -32,7 +32,10 @@ export const ProductDetails: React.FC = () => {
 
   const handleAddToCart = () => {
     if (product) {
-      if (!selectedSize) {
+      if (
+        (product.category === "men's clothing" || product.category === "women's clothing") &&
+        !selectedSize
+      ) {
         toast.error('Please select a size');
         return;
       }
@@ -93,27 +96,29 @@ export const ProductDetails: React.FC = () => {
 
             <div className="text-3xl">${product.price}</div>
 
-            {/* Size Selector */}
-            <div>
-              <div className="flex justify-between items-center mb-2">
-                <span>Size</span>
-                <button className="text-sm text-gray-600 dark:text-gray-400 underline">
-                  Size Guide
-                </button>
+            {/* Size Selector - Only for men's and women's clothing */}
+            {product.category === "men's clothing" || product.category === "women's clothing" ? (
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <span>Size</span>
+                  <button className="text-sm text-gray-600 dark:text-gray-400 underline">
+                    Size Guide
+                  </button>
+                </div>
+                <select
+                  value={selectedSize}
+                  onChange={(e) => setSelectedSize(e.target.value)}
+                  className="w-full border border-gray-300 dark:border-gray-600 rounded-md px-4 py-2 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200"
+                >
+                  <option value="">Choose an option</option>
+                  {['S', 'M', 'L', 'XL'].map((size) => (
+                    <option key={size} value={size}>
+                      {size}
+                    </option>
+                  ))}
+                </select>
               </div>
-              <select
-                value={selectedSize}
-                onChange={(e) => setSelectedSize(e.target.value)}
-                className="w-full border border-gray-300 dark:border-gray-600 rounded-md px-4 py-2 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200"
-              >
-                <option value="">Choose an option</option>
-                {['S', 'M', 'L', 'XL'].map((size) => (
-                  <option key={size} value={size}>
-                    {size}
-                  </option>
-                ))}
-              </select>
-            </div>
+            ) : null}
 
             {/* Add to Cart Button */}
             <button
