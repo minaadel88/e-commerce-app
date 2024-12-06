@@ -36,7 +36,7 @@ export const DiscountPopup: React.FC = () => {
       {!isExpanded ? (
         <div className="h-full flex items-center justify-center">
           <div className="text-center">
-            <div className="font-bold text-lg">GET 5%</div>
+            <div className="font-bold text-lg">GET extra 5%</div>
             <div className="text-sm">OFF</div>
           </div>
         </div>
