@@ -11,7 +11,7 @@ export const PaymentMethod: React.FC<PaymentMethodProps> = ({ total }) => {
   const handleGooglePay = async () => {
     setLoading(true);
     try {
-      // Simulate payment processing
+      
       await new Promise(resolve => setTimeout(resolve, 2000));
       toast.success('Payment successful! Thank you for your purchase.');
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
