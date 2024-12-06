@@ -89,7 +89,7 @@ export const ContactSection: React.FC = () => {
               <MapPin className="w-6 h-6 text-blue-600 flex-shrink-0" />
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Address</h3>
-                <p className="text-gray-600 dark:text-gray-200">32 Kornish El Maadi<br />Cairo, Egypt</p>
+                <p className="text-gray-600 dark:text-gray-200"> Kornish El Maadi<br />Cairo, Egypt</p>
               </div>
             </div>
           </div>
