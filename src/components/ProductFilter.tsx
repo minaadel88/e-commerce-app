@@ -30,7 +30,7 @@ export const ProductFilter: React.FC<ProductFilterProps> = ({
 
   return (
     <div className="space-y-6">
-      {/* Product Categories Section */}
+      
       <div>
         <button 
           onClick={() => setShowCategories(!showCategories)}
@@ -60,7 +60,6 @@ export const ProductFilter: React.FC<ProductFilterProps> = ({
         )}
       </div>
 
-      {/* Price Filter Section */}
       <div>
         <button 
           onClick={() => setShowPriceFilter(!showPriceFilter)}
