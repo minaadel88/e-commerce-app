@@ -26,13 +26,13 @@ export const HeroBanner: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change image every 5 seconds
+    }, 5000); 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="relative h-[600px] bg-gray-100 dark:bg-gray-900 overflow-hidden">
-      {/* Image Swiper */}
+      
       <div className="absolute inset-0 transition-all duration-1000 ease-in-out">
         {images.map((image, index) => (
           <img
@@ -44,13 +44,13 @@ export const HeroBanner: React.FC = () => {
         ))}
       </div>
 
-      {/* Content */}
+      
       <div className="relative max-w-7xl mx-auto px-4 h-full flex items-center">
         <div className="max-w-xl animate-fadeIn p-6 rounded-lg shadow-lg">
           <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
             {images[currentIndex].title}
           </h1>
-          {/* Border and background on description */}
+          
           <p className="text-xl text-gray-800 dark:text-gray-200 mb-8 border-4 border-gray-900 dark:border-white p-4 rounded-md bg-gray-200 dark:bg-gray-700">
             {images[currentIndex].description}
           </p>
@@ -64,7 +64,7 @@ export const HeroBanner: React.FC = () => {
         </div>
       </div>
 
-      {/* Pagination Dots */}
+      
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {images.map((_, index) => (
           <button
